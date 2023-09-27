@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+        <bean id="order" class="tech.ezrealc.entity.Order">
+                <property name="id" value="1" />
+                <property name="description" value="this is a description" />
+        </bean>
+
+        <bean id="user" class="tech.ezrealc.entity.User">
+                <property name="username" value="user1"/>
+                <property name="password" value="password1"/>
+                <property name="order" ref="order"/>
+        </bean>
+</beans>
